@@ -90,3 +90,86 @@ sources:
             description: Y coordinate in NY State Plane projection system (NAD 83)
           - name: landmark
             description: Nearby landmark or point of interest
+      - name: source_nyc_open_restaurant_apps
+        description: |
+          NYC restaurant applications.
+          One row per application.
+        columns:
+          - name: objectid
+            description: Unique ID for the service request
+            tests:
+              - unique
+              - not_null
+          - name: globalid
+            description: Unique ID for the service request
+            tests:
+              - unique
+              - not_null
+          - name: time_of_submission
+            description: Date and time the request was created
+          - name: seating_interest_sidewalk
+            description: 
+          - name: restaurant_name
+            description: 
+          - name: legal_business_name
+            description: 
+          - name: doing_business_as_dba
+            description: 
+          - name: building_number
+            description: 
+          - name: street
+            description: 
+          - name: borough
+            description: 
+          - name: zip
+            description: 
+          - name: business_address
+            description: 
+          - name: food_service_establishment
+            description: 
+          - name: sidewalk_dimensions_length
+            description: 
+          - name: sidewalk_dimensions_width
+            description: 
+          - name: sidewalk_dimensions_area
+            description: 
+          - name: roadway_dimensions_length
+            description: 
+          - name: roadway_dimensions_width
+            description: 
+          - name: roadway_dimensions_area
+            description: 
+          - name: approved_for_sidewalk_seating
+            description: 
+          - name: approved_for_roadway_seating
+            description: 
+          - name: qualify_alcohol
+            description: 
+          - name: sla_serial_number
+            description: 
+          - name: sla_license_type
+            description: 
+          - name: landmark_district_or_building
+            description: 
+          - name: landmarkdistrict_terms
+            description: 
+          - name: healthcompliance_terms
+            description: 
+          - name: latitude
+            description: 
+          - name: longitude
+            description: 
+          - name: community_board
+            description: 
+          - name: council_district
+            description: 
+          - name: census_tract
+            description: 
+          - name: bin
+            description: 
+          - name: bbl
+            description: 
+          - name: nta
+            description: 
+          - name: building_number
+            description: Dynamically added by Socrata Ingester
