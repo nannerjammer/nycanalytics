@@ -171,5 +171,5 @@ sources:
             description: 
           - name: nta
             description: 
-          - name: building_number
+          - name: bulding_number
             description: Dynamically added by Socrata Ingester
