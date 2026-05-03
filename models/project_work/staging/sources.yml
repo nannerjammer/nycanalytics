@@ -1,0 +1,175 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw data loaded from NYC Open Data
+    database: "nousin-rahman-cis9440"
+    schema: group_nine_final_proj
+
+    tables:
+      - name: nyc_dot_service_requests_history
+        description: |
+          NYC 311 service requests for Dept of Transportation.
+          One row per service request.
+        columns:
+          - name: unique_key
+            description: Unique ID for the service request
+            tests:
+              - unique
+              - not_null
+
+          - name: created_date
+            description: Date and time the request was created
+
+          - name: closed_date
+            description: Date and time the request was closed
+
+          - name: agency
+            description: Agency code
+
+          - name: agency_name
+            description: Full name of the agency
+
+          - name: complaint_type
+            description: Type of complaint
+
+          - name: descriptor
+            description: Further description of the complaint
+
+          - name: descriptor_2
+            description: Additional description of the complaint
+
+          - name: location_type
+            description: Location where the incident occurred
+
+          - name: incident_zip
+            description: Zip code of the incident location
+
+          - name: incident_address
+            description: Street address of the incident
+
+          - name: latitude
+            description: Latitude coordinate
+
+          - name: longitude
+            description: Longitude coordinate
+
+          - name: address_type
+            description: Type of address
+
+          - name: bbl
+            description: Borough Block and Lot number
+
+          - name: borough
+            description: NYC borough where incident occurred
+
+          - name: community_board
+            description: NYC Community Board district number
+
+          - name: resolution_description
+            description: Description of how the request was resolved
+
+          - name: status
+            description: Current status of request
+
+          - name: street_name
+            description: Name of street where incident occurred
+
+      - name: nyc_dot_service_mvcollision
+        description: |
+          Raw NYC Motor Vehicle Collisions crash data from NYC Open Data.
+          Grain: Each row represents one crash incident.
+          Timeline: January 2018 to present.
+
+        columns:
+          - name: collision_id
+            description: Unique ID for the crash incident
+            tests:
+              - unique
+              - not_null
+
+          - name: crash_date
+            description: Date when the collision occurred
+            tests:
+              - not_null
+
+          - name: crash_time
+            description: Time when the collision occurred
+
+          - name: borough
+            description: NYC borough where the collision occurred
+
+          - name: zip_code
+            description: ZIP code of the collision location
+
+          - name: latitude
+            description: Latitude coordinate
+
+          - name: longitude
+            description: Longitude coordinate
+
+          - name: location
+            description: Combined latitude and longitude point
+
+          - name: on_street_name
+            description: Street where the collision occurred
+
+          - name: cross_street_name
+            description: Nearest cross street
+
+          - name: off_street_name
+            description: Off-street address if available
+
+          - name: number_of_persons_injured
+            description: Total number of people injured
+
+          - name: number_of_persons_killed
+            description: Total number of people killed
+
+          - name: number_of_pedestrians_injured
+            description: Number of pedestrians injured
+
+          - name: number_of_pedestrians_killed
+            description: Number of pedestrians killed
+
+          - name: number_of_cyclist_injured
+            description: Number of cyclists injured
+
+          - name: number_of_cyclist_killed
+            description: Number of cyclists killed
+
+          - name: number_of_motorist_injured
+            description: Number of motorists injured
+
+          - name: number_of_motorist_killed
+            description: Number of motorists killed
+
+          - name: contributing_factor_vehicle_1
+            description: Contributing factor for vehicle 1
+
+          - name: contributing_factor_vehicle_2
+            description: Contributing factor for vehicle 2
+
+          - name: contributing_factor_vehicle_3
+            description: Contributing factor for vehicle 3
+
+          - name: contributing_factor_vehicle_4
+            description: Contributing factor for vehicle 4
+
+          - name: contributing_factor_vehicle_5
+            description: Contributing factor for vehicle 5
+
+          - name: vehicle_type_code1
+            description: Vehicle type for vehicle 1
+
+          - name: vehicle_type_code2
+            description: Vehicle type for vehicle 2
+
+          - name: vehicle_type_code_3
+            description: Vehicle type for vehicle 3
+
+          - name: vehicle_type_code_4
+            description: Vehicle type for vehicle 4
+
+          - name: vehicle_type_code_5
+            description: Vehicle type for vehicle 5
