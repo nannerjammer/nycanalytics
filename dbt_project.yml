@@ -38,3 +38,17 @@ models:
         
         dot_311:
           +materialized: table
+
+    project_work:
+      staging:
+        +materialized: table
+        +schema: project_staging
+      marts:
+        +materialized: table
+        +schema: project_marts
+        conformed:
+          +materialized: table
+        dept_transportation_311:
+          +materialized: table
+        vehicle_collisions:
+          +materialized: table
